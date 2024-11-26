@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio website</title>
+    <link rel="stylesheet" href="port.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <!-- Navbar  -->
+             <nav>
+                <img src="./image/shivam logo.png" class="logo" alt="logo">
+                <ul>
+            
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Service</a></li>
+                    <li><a href="">Portfolio</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- header section -->
+            <div class="header-text">
+                <p>Full Stack Developer</p>
+                <h1>Hi, I'm <span>Shivam Kumar</span><br />from India</h1>
+            </div>
+         </div>
+    </div>
+    <!-- About section started -->
+    <div id="About">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./image/shivam middle photo.jpg" alt=" shivam image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p style="text-align: justify; padding-top: 20px;
+                    font-size: 17px; ">A Full Stack Developer is a versatile professional skilled in both front-end and back-end development. They build dynamic user interfaces using technologies like HTML, CSS, and JavaScript while managing server-side logic and databases with tools like Node.js, java or express js. Full Stack Developers possess expertise in frameworks, APIs, and version control systems, enabling them to deliver end-to-end web solutions efficiently. Their adaptability makes them invaluable for creating scalable and seamless digital experiences.</p>
+                     <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+
+                     </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Language</span><br />javascript, java, c, c++,</li>
+                            <li><span>FRONTEND TECHNOLOGIES</span><br/>Reactjs,Redux, javascript, jQuery, Bootstrap, HTML, css
+                            </li>
+                            <li><span>BACKEND TECHNOLOGIES</span><br />Javascript, NodeJS, ExpressJS, .Net, PHP, Java,
+                                API</li>
+                            <li><span>DATABASE</span><br />MySQL, MongoDB, MS SQL Server</li>
+                            <li><span>DEVELOPER TOOLS</span><br />Git, GitHub, PACKET TRACER</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        
+                        
+                        <li><span>UNDERRATED CODDER</span><br />FRONTEND Developer Intern (NOVEMBER 2024 - PRESENT
+                        )</li>
+                        <li><span>CISCO NETWORKING ACADMEY</span><br />CYBER SECURITY INTERN(MAY 2024 -JULY 2024)</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>B.C.A</span><br />MEERUT INSTITUTE OF TECHNOLOGY,MEERUT <br> 2023-2026
+                        </li>
+                        <li><span>SENIOR SECONDARY</span><br />AYODHYA PRASHAD SINGH MEMORIAL COLLEGE BIHAR (BARAUNI) <br> 2021-2023
+                        </li>
+                        <li><span>SECONDARY</span><br />MAHTMA GANDHI HIGH SCHOOL BIHAT(BEGUSARAI) <br> 2019-2021</li>
+                    </ul>
+                </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer></footer>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classlist.remove("active-link");
+            }
+            for(tabcontent of tabcontents) {
+                tabcontent.classlist.remove("active-tab");
+            }
+            event.currentTarget.classlist.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
